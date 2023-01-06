@@ -57,7 +57,7 @@ function Header() {
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={currency}
-              style={{ width: 100, height: 40, marginLeft: 870 }}
+              style={{ width: 85, height: 40, marginLeft: 900 }}
               onChange={(e) => setCurrency(e.target.value)}
             >
               <MenuItem value={"USD"}>USD</MenuItem>
