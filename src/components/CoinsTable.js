@@ -77,7 +77,7 @@ export default function CoinsTable() {
         <TextField
           label="Search For a Crypto Currency.."
           variant="outlined"
-          style={{ marginBottom: 20, width: "100%" , color: "white"}}
+          style={{ marginBottom: 20, width: "100%" , color: "black"}}
           onChange={(e) => setSearch(e.target.value)}
         />
         <TableContainer component={Paper}>

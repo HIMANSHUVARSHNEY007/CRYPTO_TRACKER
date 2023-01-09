@@ -1,9 +1,11 @@
 import {
   AppBar,
+  Box,
   Container,
   MenuItem,
   Select,
-  Toolbar
+  Toolbar,
+  Typography
 } from "@material-ui/core";
 import {
   createTheme,
@@ -21,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flex: 1,
-    color: "white",
+    color: "black",
     fontFamily: "Montserrat",
     fontWeight: "bold",
     cursor: "pointer",
@@ -48,16 +50,27 @@ function Header() {
       <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
-          <img src="LOGO.png" alt="logo" className={classes.logo}
-                 onClick={() => history.push(`/`)}
+            <Box
+              component="img"
+              sx={{
+              height: 55,
+              }}
+              alt="logo"
+              src="LOGO.png"
+              onClick={() => history.push(`/`)}
             />
-            {/* <Button color="inherit">Login</Button> */}
+            <Typography
+              onClick={() => history.push(`/`)}
+              variant="h6"
+              className={classes.title}
+            >
+            </Typography>
             <Select
               variant="outlined"
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={currency}
-              style={{ width: 85, height: 40, marginLeft: 900 }}
+              style={{ width: 85, height: 40, marginLeft: 15 }}
               onChange={(e) => setCurrency(e.target.value)}
             >
               <MenuItem value={"USD"}>USD</MenuItem>

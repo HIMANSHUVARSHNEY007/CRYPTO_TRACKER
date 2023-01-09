@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     width: 400,
     backgroundColor: theme.palette.background.paper,
-    color: "white",
+    color: "black",
     borderRadius: 10,
   },
   google: {
@@ -109,14 +109,15 @@ export default function AuthModal() {
               position="static"
               style={{
                 backgroundColor: "transparent",
-                color: "white",
+                color: "#ff7500",
+                textDecorationColor: "#ff7500"
               }}
             >
               <Tabs
                 value={value}
                 onChange={handleChange}
                 variant="fullWidth"
-                style={{ borderRadius: 10, color: "black" }}
+                style={{ backgroundColor: "#ff7500", color: "black" }}
               >
                 <Tab label="Login" />
                 <Tab label="Sign Up" />
